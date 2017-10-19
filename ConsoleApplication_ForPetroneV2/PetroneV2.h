@@ -29,30 +29,30 @@ THE SOFTWARE.
 class PetroneV2
 {
 public:
-	PetroneV2();
-	virtual ~PetroneV2();
+    PetroneV2();
+    virtual ~PetroneV2();
 
 private:
-	HANDLE		hSerial;	// serial port handle
-	CString		portname;
+    HANDLE      hSerial;    // serial port handle
+    CString     portname;
 
-	bool		flagOpen;
+    bool        flagOpen;
 
 private:
-	BOOL		write(BYTE * dataArray, DWORD length);
+    BOOL        write(BYTE * dataArray, DWORD length);
 
 public:
-	bool		open(CString portname);
-	void		close();
+    bool        open(CString portname);
+    void        close();
 
-	bool		isOpen();
+    bool        isOpen();
 
-	bool		sendFlightEvent(unsigned char flightEvent, int delay = 0);
-	bool		sendTakeOff(int delay = 0);
-	bool		sendLanding(int delay = 0);
-	bool		sendStop(int delay = 0);
+    bool        sendFlightEvent(unsigned char flightEvent, int delay = 0);
+    bool        sendTakeOff(int delay = 0);
+    bool        sendLanding(int delay = 0);
+    bool        sendStop(int delay = 0);
 
-	bool		sendControl(signed char roll, signed char pitch, signed char yaw, signed char throttle, int delay = 0);
+    bool        sendControl(signed char roll, signed char pitch, signed char yaw, signed char throttle, int delay = 0);
 };
 
 

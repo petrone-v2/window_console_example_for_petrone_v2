@@ -2,9 +2,9 @@
 class CRC16
 {
 private:
-	static const unsigned short crc16table[256];		// CRC16 °ªÀ¸·Î º¯È¯ÇÏ±â À§ÇÑ ÂüÁ¶ ¹è¿­
+    static const unsigned short crc16table[256];        // CRC16 Â°Âª8Â·?Âº???Â±?Â§? uv Â¹è¿­
 
 public:
-	static unsigned short calc(unsigned char data, unsigned short crc = 0);									// byte °ªÀ» ÀÔ·ÂÇÏ¸é CRC16 °ªÀ» ¹ÝÈ¯
-	static unsigned short calc(const unsigned char * data, unsigned char length, unsigned short crc = 0);	// byte ¹è¿­°ú ±æÀÌ¸¦ ÀÔ·ÂÇÏ¸é CRC16 °ªÀ» ¹ÝÈ¯
+    static unsigned short calc(unsigned char data, unsigned short crc = 0);                                 // byte Â°Âª; TÂ·C??RC16 Â°Âª; Â¹??
+    static unsigned short calc(const unsigned char * data, unsigned char length, unsigned short crc = 0);   // byte Â¹è¿­Â°???| TÂ·C??RC16 Â°Âª; Â¹??
 };
