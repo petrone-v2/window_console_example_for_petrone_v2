@@ -66,10 +66,10 @@ const unsigned short CRC16::crc16table[256] =
 };
 
 /**
-@brif       byte¸| T·C??RC16°ª; ¹??
-@param      data            CRC16°ª; ???° ?´ μ￥L?
-@param      crc             L| ¿￢≫꿡¼­ ¾??CRC16°ª
-@return     unsigned short          ¿￢≫눑 CRC16 °ª
+@brif		byte를 입력하면 CRC16값을 반환
+@param		data			CRC16값을 추출하고자 하는 데이터
+@param		crc				이전 연산에서 얻은 CRC16값
+@return		unsigned short			연산한 CRC16 값
 */
 unsigned short CRC16::calc(unsigned char data, unsigned short crc)
 {
@@ -79,11 +79,11 @@ unsigned short CRC16::calc(unsigned char data, unsigned short crc)
 }
 
 /**
-@brif       byte ¹迭°???| T·C??RC16°ª; ¹??
-@param      *data           CRC16°ª; ???° ?´ μ￥L?
-@param      length          μ￥L?G ±灌
-@param      crc             L| ¿￢≫꿡¼­ ¾??CRC16°ª
-@return     unsigned short          ¿￢≫눑 CRC16 °ª
+@brif		byte 배열과 길이를 입력하면 CRC16값을 반환
+@param		*data			CRC16값을 추출하고자 하는 데이터
+@param		length			데이터의 길이
+@param		crc				이전 연산에서 얻은 CRC16값
+@return		unsigned short			연산한 CRC16 값
 */
 unsigned short CRC16::calc(const unsigned char * data, unsigned char length, unsigned short crc)
 {
