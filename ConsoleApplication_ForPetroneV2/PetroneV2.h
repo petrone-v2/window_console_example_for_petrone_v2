@@ -39,10 +39,7 @@ private:
 	bool		flagOpen;
 
 private:
-	DWORD		write(BYTE * dataArray, int length);
-
-public:
-	void		sleep(unsigned int mseconds);
+	BOOL		write(BYTE * dataArray, DWORD length);
 
 public:
 	bool		open(CString portname);
@@ -50,12 +47,12 @@ public:
 
 	bool		isOpen();
 
-	bool		sendFlightEvent(unsigned char flightEvent);
-	bool		sendTakeOff();
-	bool		sendLanding();
-	bool		sendStop();
+	bool		sendFlightEvent(unsigned char flightEvent, int delay = 0);
+	bool		sendTakeOff(int delay = 0);
+	bool		sendLanding(int delay = 0);
+	bool		sendStop(int delay = 0);
 
-	bool		sendControl(signed char roll, signed char pitch, signed char yaw, signed char throttle);
+	bool		sendControl(signed char roll, signed char pitch, signed char yaw, signed char throttle, int delay = 0);
 };
 
 
